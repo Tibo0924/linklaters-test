@@ -1,0 +1,68 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  background-color: #242424;
+  color: #606060;
+  height: 4.5rem;
+}
+
+.metaSection {
+  padding: 1rem;
+  border-right: 0.5px solid #1e1e1e;
+  font-size: .8rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  padding: 0 3rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.sunt {
+  color: #84645b;
+  font-size: 1.25rem;
+}
+
+.actionButtonGroup {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  border-left: 0.5px solid #1e1e1e;
+  border-right: 0.5px solid #1e1e1e;
+  height: 100%;
+  margin-right: 9rem;
+  padding: 0 1rem;
+}
+
+.actionButton {
+  background-color: transparent;
+  border: none;
+  color: #606060;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.round {
+  border-radius: 50%;
+  background-color: #727272;
+  color: #fff;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0 auto 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

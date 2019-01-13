@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+  background-color: #222324;
+  /* sorry for the height hack because of the overflowing absolute dropdown */
+  min-height: calc(100vh + 35rem);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

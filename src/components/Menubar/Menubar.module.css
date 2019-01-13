@@ -1,0 +1,67 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #171717;
+  height: 1.75rem;
+  padding: 0.25rem 1rem; 
+}
+
+ .menu {
+  display: flex;
+ }
+
+.menuLink {
+  color: #fff;
+  margin: 0 0.75rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.menuLinkActive {
+  color: #b28a50;
+  font-weight: bold;
+}
+
+.profileSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 13rem;
+}
+
+.profileButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  color: #575757;
+  font-size: 0.9rem;
+}
+
+.arrowSVG {
+  padding-left: 0.3rem;
+}
+
+.arrowSVGUp {
+  transform: rotate(180deg);
+}
+
+.round {
+  border-radius: 50%;
+  background-color: #727272;
+  color: #fff;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
