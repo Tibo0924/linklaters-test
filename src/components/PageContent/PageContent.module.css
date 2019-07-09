@@ -42,3 +42,7 @@
 .listItem {
   margin: 0.3rem 0;
 }
+
+.extra {
+  color: red;
+}

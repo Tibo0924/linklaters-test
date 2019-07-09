@@ -13,6 +13,7 @@ class App extends Component {
         'Ipsa quae',
         'Perspiciatis Unde'].map((text, id) => ({ text, id, isActive: false })),
       profileName: 'Veris Veritatis',
+      isCheckboxOn: false,
       dropdownOptions: [
         {
           text: 'Accusantium doloremque laudant',
@@ -44,6 +45,10 @@ class App extends Component {
     }
   }
 
+  toggleCheckbox = () => {
+    this.setState({ isCheckboxOn: !this.state.isCheckboxOn })
+  }
+
   menuClickHandler = (id) => {
     // only one menuLink can be active at the time
 
@@ -58,7 +63,7 @@ class App extends Component {
   }
 
   render() {
-    const { menu, profileName, dropdownOptions } = this.state;
+    const { menu, profileName, dropdownOptions, isCheckboxOn } = this.state;
     return (
       <div className="App">
         <Menubar
@@ -66,8 +71,11 @@ class App extends Component {
           profileName={profileName}
           onClick={this.menuClickHandler}
         />
-        <ActionBar />
+        <ActionBar
+          checkboxCallback={this.toggleCheckbox}
+        />
         <PageContent
+          isCheckboxOn={isCheckboxOn}
           dropdownOptions={dropdownOptions}
         />
       </div>

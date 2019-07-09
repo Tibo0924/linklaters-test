@@ -22,6 +22,9 @@
   transition: .4s;
   border-radius: 2rem;
 }
+.bluebg {
+  background-color: slateblue;
+}
 .slider:before {
   position: absolute;
   content: "";

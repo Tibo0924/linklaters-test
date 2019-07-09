@@ -4,7 +4,7 @@ import { ArrowSVG, MailSVG, WasteBasketSVG } from '../SVG'
 import Checkbox from '../Checkbox';
 import styles from './ActionBar.module.css';
 
-const ActionBar = () => {
+const ActionBar = ({ checkboxCallback }) => {
   const titleClassName = classNames(
     styles.metaSection,
     styles.title,
@@ -43,13 +43,11 @@ const ActionBar = () => {
           Archieto
         </button>
         <button className={styles.actionButton}>
-          <Checkbox />
+          <Checkbox callback={checkboxCallback} />
           Aperiam
         </button>
         <button className={styles.actionButton}>
-          <Checkbox
-            checked
-          />
+          <Checkbox checked />
           Totam
         </button>
         <button className={styles.actionButton}>

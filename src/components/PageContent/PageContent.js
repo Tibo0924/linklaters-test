@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import uuidv4 from 'uuid/v4';
+import classNames from 'classnames';
 import { TickIconSVG } from '../SVG';
 import FormGroup from '../FormGroup';
 import styles from './PageContent.module.css'
 
-const PageContent = ({ dropdownOptions }) => {
+const PageContent = ({ dropdownOptions, isCheckboxOn }) => {
   const lists = [
     ['Otam rem aperian', 'Ipsa quae', 'Unde omnis', 'Voluptatem (duvrnem'],
     ['Perspiciatis Unde', 'Architecto beatae vitae', 'Perspiciatis Unde', 'Architecto beatae vitae'],
@@ -28,14 +29,21 @@ const PageContent = ({ dropdownOptions }) => {
             className={styles.list}
             key={uuidv4()}
           >
-            {list.map(listItem => (
+            {list.map((listItem, i) => {
+              const listItemClassName = classNames(
+                styles.listItem,
+                {
+                  [styles.extra]: (i % 2 === 0 && isCheckboxOn),
+                }
+              )
+              return (
               <div
                 key={uuidv4()}
-                className={styles.listItem}
+                className={listItemClassName}
               >
                 {listItem}
-              </div>
-            ))}
+              </div>  
+            )})}
           </div>
         ))}
       </div>
